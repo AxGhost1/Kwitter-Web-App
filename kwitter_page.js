@@ -14,10 +14,14 @@ function getData() { firebase.database().ref("/"+room_name).on('value', function
          firebase_message_id = childKey;
          message_data = childData;
 
-function logout() { 
+
+
+      } });  }); }
+      
+      function logout() { 
       localStorage.removeItem("user_name");
       localStorage.removeItem("room_name");
-      window.location = "kwitter_room.html";
+      window.location = "index.html";
   }
 
 function send() {
@@ -31,5 +35,5 @@ function send() {
       document.getElementById("msg").value = "";
 }
 
-      } });  }); }
+
 getData();
